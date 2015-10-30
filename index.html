@@ -26,16 +26,14 @@
 </div>
 
 <!--main-->
-<div class="container" id="main">
+<div class="container" id="main" ng-controller="serverInputController">
    <div class="row">
    
          <div class="col-md-12 col-sm-12">
         <div class="panel panel-default">
            <div class="panel-heading"><h4>Home Lab Servers</h4></div>
    			<div class="panel-body">
-        
-                 <div id="ngServer1" ng-controller="serverInputController">
-
+                
                               <!-- Responsive table starts here -->
                               <!-- For correct display on small screens you must add 'data-title' to each 'td' in your table -->
                               <div class="table-responsive-vertical shadow-z-1">
@@ -62,11 +60,49 @@
                                   </tbody>
                                 </table>
                               </div>
-                            </div>
+                         
             </div>
    		</div>
        </div>
     </div>
+    
+    <div class="row">
+  
+        <div class="col-md-4 col-sm-6" data-ng-repeat="svr in iservers.servers">
+            <div class="panel panel-default">
+           <div class="panel-heading"><h4>{{svr.serverName}}</h4></div>
+   			<div class="panel-body">
+
+                          <!-- Responsive table starts here -->
+                          <!-- For correct display on small screens you must add 'data-title' to each 'td' in your table -->
+                          <div class="table-responsive-vertical shadow-z-1">
+                          <!-- Table starts here -->
+                          <table id="table" class="table table-hover table-mc-red">
+                              <thead>
+                                <tr>
+                                  <th>Name</th>
+                                  <th>Address</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                             <!--     <tr>
+                                  <td data-title="serviceName">service name</td>
+                                      <td data-title="serviceAddress">service Address</td>
+                                  </tr>-->
+                                <tr ng-repeat="server in iservers.servers">
+                                  <td data-title="serviceName">{{server.services.serviceName}}</td>
+                                  <td data-title="serviceAddress">{{server.services.serviceAddress}}</td>
+                                </tr>
+
+                              </tbody>
+                            </table>
+                          </div>
+                        </div>
+                    </div>
+                </div>
+
+        </div>
+
 </div><!--/main-->
 
 
