@@ -3,6 +3,12 @@ An all-in-one place to see your homelab information. Like a network map/diagram,
 
 A demo can be found here: [testing.devsvr.net](http://testing.devsvr.net)
 
+To use:
+* Install preferred Webserver
+* clone this repository
+* edit the "controller.js" file to your liking
+* configure webserver to serve the repo directory
+* profit!!!
 
 # Thanks to these people
 Theme:
