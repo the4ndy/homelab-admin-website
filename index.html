@@ -89,9 +89,9 @@
                                   <td data-title="serviceName">service name</td>
                                       <td data-title="serviceAddress">service Address</td>
                                   </tr>-->
-                                <tr ng-repeat="server in iservers.servers">
-                                  <td data-title="serviceName">{{server.services.serviceName}}</td>
-                                  <td data-title="serviceAddress">{{server.services.serviceAddress}}</td>
+                                <tr ng-repeat="service in svr.services">
+                                  <td data-title="serviceName">{{service.serviceName}}</td>
+                                  <td data-title="serviceAddress">{{service.serviceAddress}}</td>
                                 </tr>
 
                               </tbody>
