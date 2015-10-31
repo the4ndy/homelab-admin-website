@@ -11,7 +11,7 @@ To use:
 * profit!!!
 
 # Roadmap
-* fix individual server panel services lists
+* ~~fix individual server panel services lists~~
 * add link capability to server list
 * add "About" and "Network Map" modals
 * add icons / touchup design
