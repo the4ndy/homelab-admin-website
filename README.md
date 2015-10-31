@@ -10,6 +10,12 @@ To use:
 * configure webserver to serve the repo directory
 * profit!!!
 
+# Roadmap
+* fix individual server panel services lists
+* add "About" and "Network Map" modals
+* add icons / touchup design
+* add ability to insert new content via web interface (ideally without the need for a DB service)
+
 # Thanks to these people
 Theme:
 
