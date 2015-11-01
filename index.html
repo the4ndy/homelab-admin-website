@@ -11,6 +11,7 @@
 			<script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
 		<![endif]-->
 		<link href="css/styles.css" rel="stylesheet">
+        <link rel="stylesheet" href="css/fa/css/font-awesome.min.css">
 	</head>
 	<body ng-app="serverInputApp">
 <div class="navbar navbar-fixed-top header" id="nav">
@@ -41,20 +42,20 @@
                               <table id="table" class="table table-hover table-mc-red">
                                   <thead>
                                     <tr>
-                                      <th>VMID</th>
-                                      <th>Hostname</th>
-                                      <th>Description</th>
-                                      <th>IP Address</th>
+                                      <th><i class="fa fa-cubes"></i> VMID</th>
+                                      <th><i class="fa fa-bullhorn"></i> Hostname</th>
+                                      <th><i class="fa fa-info-circle"></i> Description</th>
+                                      <th><i class="fa fa-map-signs"></i> IP Address</th>
                                     </tr>
                                   </thead>
                                   <tbody>
                                     <tr ng-repeat="server in homelab.servers">
                                       <td data-title="VMID">{{server.vmid}}</td>
-                                      <td data-title="hostname">{{server.hostname}}</td>
+                                      <td data-title="hostname"><a target="_blank" href="{{server.url}}">{{server.hostname}}</a></td>
                                       <td data-title="description">
                                         {{server.desc}}
                                       </td>
-                                      <td data-title="ip">{{server.ip}}</td>
+                                        <td data-title="ip"><a target="_blank" href="{{server.url}}">{{server.ip}}</a></td>
                                     </tr>
 
                                   </tbody>
@@ -90,10 +91,9 @@
                                       <td data-title="serviceAddress">service Address</td>
                                   </tr>-->
                                 <tr ng-repeat="service in svr.services">
-                                  <td data-title="serviceName">{{service.serviceName}}</td>
-                                  <td data-title="serviceAddress">{{service.serviceAddress}}</td>
-                                </tr>
-
+                                    <td data-title="serviceName"><a target="_blank" href="{{service.serviceURL}}">{{service.serviceName}}</a></td>
+                                    <td data-title="serviceAddress"><a target="_blank" href="{{service.serviceURL}}">{{service.serviceAddress}}</a></td>
+                                    </tr>
                               </tbody>
                             </table>
                           </div>
