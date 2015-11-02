@@ -6,7 +6,7 @@ serverInputApp.controller('serverInputController',
         $scope.homelab = {
             hypervisors: [
                 {
-                    "hypervisorName": "pm0",
+                    "hypervisorName": "hypervisor0",
                      servers: [
                         {
                          "hostname": "server0",
@@ -40,7 +40,7 @@ serverInputApp.controller('serverInputController',
                         ]
                 },
                 {
-                    "hypervisorName": "pm1",
+                    "hypervisorName": "hypervisor1",
                      servers: [
                         {
                          "hostname": "server20",
