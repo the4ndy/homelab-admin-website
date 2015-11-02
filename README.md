@@ -7,13 +7,14 @@ To use:
 * Install preferred Webserver
 * clone this repository
 * edit the "controller.js" file to your liking
+* replace img/netmap.png with any network map image (ideal dimensions are 1024x768)
 * configure webserver to serve the repo directory
 * profit!!!
 
 # Roadmap
 * ~~fix individual server panel services lists~~
 * ~~add link capability to server list~~
-* add "About" and "Network Map" modals
+* ~~add "About" and "Network Map" modals~~
 * add ~~icons~~ / touchup design
 * add ability to insert new content via web interface (ideally without the need for a DB service)
 * make rows clickable (gracefully)
