@@ -74,7 +74,7 @@ h3,h4,h5 {
  padding-bottom:10px;
 }
 .modal-dialog {
- width: 450px;
+/* width: 450px;*/
 }
 .modal-footer {
  border-width:0;
@@ -739,4 +739,14 @@ h3,h4,h5 {
     .table-responsive-vertical .table-hover.table-mc-deep-orange > tbody > tr > td:hover {
         background-color: #ffccbc;
     }
+}
+
+.modal-netmap {
+    width: 60vw;
+    height: 80vh;
+}
+
+.netmap-image {
+     width: 51vw;
+    height: 68vh;
 }

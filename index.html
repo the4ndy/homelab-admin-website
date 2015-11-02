@@ -34,8 +34,16 @@
         <div class="panel panel-default">
            <div class="panel-heading"><h4>Home Lab Servers</h4></div>
    			<div class="panel-body">
-                
-                              <!-- Responsive table starts here -->
+                 <ul class="nav nav-tabs">
+                  <li ng-repeat="hypervisor in homelab.hypervisors"><a href="#{{hypervisor.hypervisorName}}" data-toggle="tab">{{hypervisor.hypervisorName}}</a></li>
+                  <!--<li><a href="#B" data-toggle="tab">Section 2</a></li>
+                  <li><a href="#C" data-toggle="tab">Section 3</a></li>-->
+                </ul>
+                <div class="tabbable">
+                  <div class="tab-content">
+                    <div class="tab-pane" ng-repeat="hypervisor in homelab.hypervisors" id="{{hypervisor.hypervisorName}}">
+                      <div class="well well-sm">
+                        <!-- Responsive table starts here -->
                               <!-- For correct display on small screens you must add 'data-title' to each 'td' in your table -->
                               <div class="table-responsive-vertical shadow-z-1">
                               <!-- Table starts here -->
@@ -49,7 +57,7 @@
                                     </tr>
                                   </thead>
                                   <tbody>
-                                    <tr ng-repeat="server in homelab.servers">
+                                    <tr ng-repeat="server in hypervisor.servers">
                                       <td data-title="VMID">{{server.vmid}}</td>
                                       <td data-title="hostname"><a target="_blank" href="{{server.url}}">{{server.hostname}}</a></td>
                                       <td data-title="description">
@@ -61,6 +69,17 @@
                                   </tbody>
                                 </table>
                               </div>
+                        </div>
+                    </div>
+                  <!--  <div class="tab-pane" id="B">
+                      <div class="well well-sm">Howdy, I'm in Section B.</div>
+                    </div>
+                    <div class="tab-pane" id="C">
+                      <div class="well well-sm">I've decided that I like wells.</div>
+                    </div>-->
+                  </div>
+                </div> <!-- /tabbable -->
+                              
                          
             </div>
    		</div>
@@ -105,10 +124,31 @@
 
 </div><!--/main-->
 
+<!--netmap modal-->
 
+<div id="netmapModal" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-netmap modal-dialog">
+  <div class="modal-content">
+      <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+          <h2 class="text-center">Network Map</h2>
+      </div>
+      <div class="modal-body">
+          <div class="col-md-12 text-center">
+            
+             <a href="img/netmap.png" target="_blank"><img class="netmap-image" src="img/netmap.png"></a>
+              
+          </div>
+      </div>
+      <div class="modal-footer">
+          <button class="btn" data-dismiss="modal" aria-hidden="true">OK</button>
+      </div>
+  </div>
+  </div>
+</div>
 
 <!--about modal-->
-<!--
+
 <div id="aboutModal" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
   <div class="modal-dialog">
   <div class="modal-content">
@@ -118,9 +158,13 @@
       </div>
       <div class="modal-body">
           <div class="col-md-12 text-center">
-            <a href="http://www.bootply.com/DwnjTNuvVt">This Bootstrap Template</a><br>was made with <i class="glyphicon glyphicon-heart"></i> by <a href="http://bootply.com/templates">Bootply</a>
-            <br><br>
-            <a href="https://github.com/iatek/bootstrap-google-plus">GitHub Fork</a>
+              This project was created by the4ndy (with help of course)
+              <br><br>
+              <p>"Please Edit this Modal to your liking. No attribution is required. Donations are accepted and greatly appreciated. If you are wondering "what am I going to do with this space?" That is not my problem :P Though I intend to use this space for personal links (like to the github for this project)." 
+                  <br>-the4ndy</p>
+              <hr>
+    <i class="fa fa-bitcoin"></i> 18GiREf2TxQTMK5YXP3MgpgWc4qoYKZCWC
+              <hr>
           </div>
       </div>
       <div class="modal-footer">
@@ -128,7 +172,7 @@
       </div>
   </div>
   </div>
-</div>-->
+</div>
         
 	<!-- script references -->
         <script src="js/angular.min.js"></script>

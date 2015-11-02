@@ -16,13 +16,15 @@ To use:
 * add "About" and "Network Map" modals
 * add ~~icons~~ / touchup design
 * add ability to insert new content via web interface (ideally without the need for a DB service)
+* make rows clickable (gracefully)
+* fix the "active" issue with PM tabs
 
 # Thanks to these people
 Theme:
 
 [Template Source Code](http://www.bootply.com/90113)  
 [Template by @Bootply](http://bootply.com/templates)
-
+[gitHub Fork](https://github.com/iatek/bootstrap-google-plus)
 
 Instruction:
 
