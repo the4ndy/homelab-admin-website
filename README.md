@@ -18,7 +18,7 @@ To use:
 * add ~~icons~~ / touchup design
 * add ability to insert new content via web interface (ideally without the need for a DB service)
 * make rows clickable (gracefully)
-* fix the "active" issue with PM tabs
+* fix the "active" issue with hypervisor tabs
 
 # Thanks to these people
 Theme:
